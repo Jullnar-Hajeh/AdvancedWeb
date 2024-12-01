@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../styles/6-villagemanagement1.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav>
+        <ul>
+          <li id="overview-tab">Overview</li>
+          <li id="village-management-tab">Village Management</li>
+          <li id="gallery-tab">Gallery</li>
+        </ul>
+      </nav>
+      <div class="admin-section">
+        <span>Admin Name</span>
+        <a href="#" class="logout">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="overview-section" class="tab-section">
+        <h3>Overview</h3>
+        <p>Overview content goes here.</p>
+      </section>
+      <section id="village-management-section" class="tab-section hidden">
+        <h3>Village Management</h3>
+        <button class="add-village">Add New Village</button>
+        <div class="village-list">
+          <!-- Example content -->
+          <div class="village-item">
+            <span>Jabalia - Gaza Strip</span>
+            <div class="actions">
+              <button>View</button>
+              <button>Update Village</button>
+              <button>Delete Village</button>
+              <button>Update Demographic Data</button>
+            </div>
+          </div>
+          <!-- Add more villages dynamically -->
+        </div>
+      </section>
+      <section id="gallery-section" class="tab-section hidden">
+        <h3>Gallery</h3>
+        <p>Gallery content goes here.</p>
+      </section>
+    </main>
+  </div>
+  <script src="../javascript/6-villagemanagement1.js"></script>
+</body>
+</html>

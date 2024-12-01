@@ -5,6 +5,7 @@
 @button-hover: #2563EB;
 @card-bg: #1f2937;
 
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -46,14 +47,21 @@ body {
                 margin-bottom: 1rem;
                 border: 1px solid #444;
                 border-radius: 4px;
-                background-color: @primary-text;
-                color: @secondary-text;
+                background-color: @primary-bg; // Changed to match background theme
+                color: @secondary-text; // Text typed by the user
                 font-size: 1.2rem;
+            
                 &::placeholder {
-                    font-size: 1.2rem;
-                    color: darken(@secondary-text,10%); // Makes placeholder text slightly lighter than @primary-text
+                    font-size: 1.2rem; // Adjust placeholder text size
+                    color: darken(@secondary-text, 10%); // Darker placeholder text
+                }
+            
+                &:focus {
+                    border: 2px solid @button-hover; // Add focus border color
+                    outline: none; // Remove default focus outline
                 }
             }
+            
             
 
             button {

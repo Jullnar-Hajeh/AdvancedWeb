@@ -36,13 +36,17 @@ body {
   margin-bottom: 1rem;
   border: 1px solid #444;
   border-radius: 4px;
-  background-color: #FFFFFF;
+  background-color: #1a202c;
   color: #acb2bc;
   font-size: 1.2rem;
 }
 #login-page .login-container form input::placeholder {
   font-size: 1.2rem;
   color: #9098a5;
+}
+#login-page .login-container form input:focus {
+  border: 2px solid #2563EB;
+  outline: none;
 }
 #login-page .login-container form button {
   background-color: #3B82F6;

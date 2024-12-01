@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #1e1e2f;
+}
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+.dashboard .sidebar {
+  width: 250px;
+  background-color: #2c2c3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.dashboard .sidebar h2 {
+  color: #fff;
+}
+.dashboard .sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.dashboard .sidebar nav ul li {
+  margin: 15px 0;
+  cursor: pointer;
+  color: #bbb;
+}
+.dashboard .sidebar nav ul li:hover {
+  color: #fff;
+}
+.dashboard .sidebar .admin-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard .sidebar .admin-section .logout {
+  color: red;
+  text-decoration: none;
+}
+.dashboard .content {
+  flex: 1;
+  padding: 20px;
+  background-color: #454560;
+}
+.dashboard .content .tab-section {
+  display: none;
+}
+.dashboard .content .tab-section.visible {
+  display: block;
+}
+.dashboard .content .village-list .village-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #454560;
+  border-radius: 5px;
+}
+.dashboard .content .village-list .village-item .actions button {
+  margin-left: 5px;
+}
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .dashboard .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .dashboard .content {
+    padding: 10px;
+  }
+}

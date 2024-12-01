@@ -1,0 +1,105 @@
+@bg-color: #1e1e2f;
+@sidebar-bg: #2c2c3d;
+@card-bg: #454560;
+@text-color: #fff;
+@hover-color: #bbb;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: @text-color;
+  background-color: @bg-color;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+
+  .sidebar {
+    width: 250px;
+    background-color: @sidebar-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    h2 {
+      color: @text-color;
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 15px 0;
+          cursor: pointer;
+          color: @hover-color;
+
+          &:hover {
+            color: @text-color;
+          }
+        }
+      }
+    }
+
+    .admin-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logout {
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: @card-bg;
+
+    .tab-section {
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
+
+    .village-list {
+      .village-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: @card-bg;
+        border-radius: 5px;
+
+        .actions button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .content {
+      padding: 10px;
+    }
+  }
+}
