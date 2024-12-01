@@ -3,6 +3,9 @@
 @card-bg: #454560;
 @text-color: #fff;
 @hover-color: #bbb;
+@button-bg: #5a5a7a;
+@button-hover-bg: #707090;
+@header-bg: #3a3a5a; // Add a color for the header background
 
 body {
   margin: 0;
@@ -25,15 +28,17 @@ body {
 
     h2 {
       color: @text-color;
+      margin: 0; // Remove margin to eliminate space below Dashboard
     }
 
     nav {
       ul {
+        margin: 0; // Remove margin above the list
         list-style: none;
         padding: 0;
 
         li {
-          margin: 15px 0;
+          margin: 10px 0; // Vertical space between list items
           cursor: pointer;
           color: @hover-color;
 
@@ -48,10 +53,12 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 20px;
 
       .logout {
         color: red;
         text-decoration: none;
+        font-size: 14px;
       }
     }
   }
@@ -59,28 +66,107 @@ body {
   .content {
     flex: 1;
     padding: 20px;
-    background-color: @card-bg;
+    background-color: @bg-color;
 
-    .tab-section {
-      display: none;
+    .header {
+      display: flex;
+      flex-direction: column;
+      background-color: @header-bg; // Background color for the header section
+      padding: 10px;
+      margin-bottom: 20px;
 
-      &.visible {
-        display: block;
+      h3 {
+        margin-top: 0; // Remove space above header
+        color: @text-color;
+      }
+
+      button {
+        background-color: @button-bg;
+        color: @text-color;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px; // Add space below button
+        width: 100%; // Make the button stretch across the width
+
+        &:hover {
+          background-color: @button-hover-bg;
+        }
       }
     }
 
     .village-list {
+      background-color: @card-bg; // Background color for the village list section
+      padding: 15px;
+      border-radius: 5px;
+
+      .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        input {
+          padding: 8px;
+          border: 1px solid #3a3a5a;
+          border-radius: 5px;
+          background-color: @sidebar-bg;
+          color: @text-color;
+          flex-grow: 1; // Make the input take the remaining space
+          margin-right: 10px; // Space between input and select
+        }
+
+        select {
+          padding: 8px;
+          border: 1px solid #3a3a5a;
+          border-radius: 5px;
+          background-color: @sidebar-bg;
+          color: @text-color;
+        }
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+
+        button {
+          background-color: @button-bg;
+          color: @text-color;
+          padding: 8px 15px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-left: 10px; // Space between buttons
+
+          &:hover {
+            background-color: @button-hover-bg;
+          }
+        }
+      }
+
       .village-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
         margin-bottom: 10px;
-        padding: 10px;
         background-color: @card-bg;
         border-radius: 5px;
 
         .actions button {
           margin-left: 5px;
+          background-color: @button-bg;
+          color: @text-color;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: @button-hover-bg;
+          }
         }
       }
     }
@@ -96,6 +182,10 @@ body {
       flex-direction: row;
       justify-content: space-around;
       padding: 10px;
+
+      nav ul li {
+        margin: 10px 0;
+      }
     }
 
     .content {

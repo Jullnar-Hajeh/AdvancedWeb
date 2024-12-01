@@ -1,26 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const tabs = {
-      overview: document.getElementById("overview-section"),
-      villageManagement: document.getElementById("village-management-section"),
-      gallery: document.getElementById("gallery-section"),
-    };
+    // Get references to elements
+    const villageManagementBtn = document.getElementById("village-management-btn");
+    const villageManagementSection = document.getElementById("village-management-section");
   
-    // Tab buttons
-    document.getElementById("overview-tab").addEventListener("click", () => {
-      showTab(tabs.overview);
+    // Hide all content sections by default
+    const allContentSections = document.querySelectorAll(".content");
+    allContentSections.forEach(section => section.style.display = "none");
+  
+    // Add click event to "Village Management" button
+    villageManagementBtn.addEventListener("click", function () {
+      // Hide all content sections
+      allContentSections.forEach(section => (section.style.display = "none"));
+  
+      // Show the Village Management section
+      villageManagementSection.style.display = "block";
     });
-  
-    document.getElementById("village-management-tab").addEventListener("click", () => {
-      showTab(tabs.villageManagement);
-    });
-  
-    document.getElementById("gallery-tab").addEventListener("click", () => {
-      showTab(tabs.gallery);
-    });
-  
-    function showTab(tab) {
-      Object.values(tabs).forEach((t) => t.classList.add("hidden"));
-      tab.classList.remove("hidden");
-    }
   });
   

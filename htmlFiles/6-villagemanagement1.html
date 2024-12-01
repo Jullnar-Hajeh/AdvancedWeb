@@ -7,52 +7,61 @@
   <link rel="stylesheet" href="../styles/6-villagemanagement1.css">
 </head>
 <body>
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Dashboard</h2>
-      <nav>
-        <ul>
-          <li id="overview-tab">Overview</li>
-          <li id="village-management-tab">Village Management</li>
-          <li id="gallery-tab">Gallery</li>
-        </ul>
-      </nav>
-      <div class="admin-section">
-        <span>Admin Name</span>
-        <a href="#" class="logout">Logout</a>
-      </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <section id="overview-section" class="tab-section">
-        <h3>Overview</h3>
-        <p>Overview content goes here.</p>
-      </section>
-      <section id="village-management-section" class="tab-section hidden">
-        <h3>Village Management</h3>
-        <button class="add-village">Add New Village</button>
-        <div class="village-list">
-          <!-- Example content -->
-          <div class="village-item">
-            <span>Jabalia - Gaza Strip</span>
-            <div class="actions">
-              <button>View</button>
-              <button>Update Village</button>
-              <button>Delete Village</button>
-              <button>Update Demographic Data</button>
-            </div>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h2>Dashboard</h2>
+          <nav>
+            <ul>
+              <li id="overview-btn">Overview</li>
+              <li id="village-management-btn">Village Management</li>
+              <li id="chat-btn">Chat</li>
+              <li id="gallery-btn">Gallery</li>
+            </ul>
+          </nav>
+          <div class="admin-section">
+            <span>Admin Name</span>
+            <a href="#" class="logout">Logout</a>
           </div>
-          <!-- Add more villages dynamically -->
         </div>
-      </section>
-      <section id="gallery-section" class="tab-section hidden">
-        <h3>Gallery</h3>
-        <p>Gallery content goes here.</p>
-      </section>
-    </main>
-  </div>
+      
+        <!-- Content -->
+        <div class="content" id="village-management-section">
+          <div class="header">
+            
+            <h3>View Village List</h3>
+            <button>Add New Village</button>
+          </div>
+          <div class="village-list">
+            <div class="search-bar">
+              <input type="text" placeholder="Search villages..." />
+              <select>
+                <option>Sort by: Default</option>
+              </select>
+            </div>
+            <div class="village-item">
+              <span>Jabalia - Gaza Strip</span>
+              <div class="actions">
+                <button>View</button>
+                <button>Update Village</button>
+                <button>Delete Village</button>
+                <button>Update Demographic Data</button>
+              </div>
+            </div>
+            <div class="village-item">
+                <span>Jabalia - Gaza Strip</span>
+                <div class="actions">
+                  <button>View</button>
+                  <button>Update Village</button>
+                  <button>Delete Village</button>
+                  <button>Update Demographic Data</button>
+                </div>
+              </div>
+            
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+      </div>      
   <script src="../javascript/6-villagemanagement1.js"></script>
 </body>
 </html>
