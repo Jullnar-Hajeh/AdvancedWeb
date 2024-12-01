@@ -38,6 +38,7 @@ body {
   border-radius: 4px;
   background-color: #FFFFFF;
   color: #acb2bc;
+  font-size: 1.2rem;
 }
 #login-page .login-container form input::placeholder {
   font-size: 1.2rem;
